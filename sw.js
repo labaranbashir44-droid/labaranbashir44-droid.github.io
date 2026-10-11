@@ -1,5 +1,5 @@
 // ALLON BINCIKE service worker: cache everything on first load so the app works fully offline.
-var CACHE = 'allon-bincike-v2';
+var CACHE = 'allon-bincike-v4';
 var FILES = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './icon-512-maskable.png'];
 self.addEventListener('install', function(e){
   e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(FILES); }).then(function(){ return self.skipWaiting(); }));
